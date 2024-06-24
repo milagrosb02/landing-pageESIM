@@ -27,33 +27,36 @@
 
     <style>
         .left-img {
-            text-align: center; /* Centra la imagen horizontalmente */
+            text-align: center;
         }
 
         .left-img img {
-            display: inline-block; /* Asegura que la imagen se centre correctamente */
-            max-width: 100%; /* Ajusta el tamaño de la imagen al contenedor */
-            height: auto; /* Mantiene la proporción de la imagen */
+            display: inline-block;
+            max-width: 100%;
+            height: auto;
         }
 
-        /* Margen superior para evitar superposición */
         .hero__caption2 {
-            margin-top: 60px; /* Ajusta este valor según sea necesario */
+            margin-top: 60px;
         }
-        
-        /* Estilos específicos para el botón "Volver Atrás" */
+
         .button-back {
             margin-top: 20px;
         }
 
         @media (max-width: 767px) {
+            .hero__caption2 {
+                margin-top: 20px;
+            }
+            
             .button-back {
                 text-align: center;
                 margin-top: 10px;
             }
 
-            .hero__caption2 {
-                margin-top: 20px;
+            .left-img img {
+                width: 100%;
+                max-width: none;
             }
         }
     </style>
