@@ -26,29 +26,49 @@
     <link rel="stylesheet" href="assets/css/style.css">
 
     <style>
-        .footer-banner {
+        .footer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+    }
+
+    .footer-icons {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 20px;
+    }
+
+    .footer-icon {
+        width: 30px; /* Ajusta según el tamaño de tus iconos */
+        height: auto;
+        margin: 0 10px; /* Espaciado entre iconos */
+    }
+
+    .footer-banner {
         text-align: center;
         margin-top: 20px;
         padding: 20px;
-        }
+    }
 
+    .footer-banner img {
+        width: 100%;
+        max-width: 500px; /* Ajusta según sea necesario */
+        height: auto;
+    }
+
+    @media (min-width: 768px) {
         .footer-banner img {
-            width: 100%;
-            max-width: 500px; /* Ajusta según sea necesario */
-            height: auto;
+            max-width: 600px; /* Ajusta según sea necesario para pantallas más grandes */
         }
+    }
 
-        @media (min-width: 768px) {
-            .footer-banner img {
-                max-width: 600px; /* Ajusta según sea necesario para pantallas más grandes */
-            }
+    @media (min-width: 1024px) {
+        .footer-banner img {
+            max-width: 700px; /* Ajusta según sea necesario para pantallas aún más grandes */
         }
+    }
 
-        @media (min-width: 1024px) {
-            .footer-banner img {
-                max-width: 700px; /* Ajusta según sea necesario para pantallas aún más grandes */
-            }
-        }
 
     </style>
     
@@ -318,35 +338,11 @@
                     <div class="section-tittle section-tittle2 mb-55">
                         <div class="front-text">
                             <h2 class="">Experiencias ESIM</h2>
-                            <p>En la Escuela Secundaria de Innovación, los estudiantes viven experiencias únicas que enriquecen su educación. 
-                                Desde viajes provinciales hasta proyectos comunitarios, cada momento está diseñado para inspirar y formar líderes del futuro.</p>
+                            <p>Palabras del Ex Director de la Escuela Secundaria de Innovación de Misiones y actual Ministro de Educación Ciencia y Tecnología de la Provincia de Misiones en el marco del Congreso Internacional de Robótica Educativa en la ciudad de Córdoba 2023.</p>
                         </div>
                     </div>
-                    <div class="single-features">
-                        <div class="features-icon">
-                            <img src="assets/img/icon/right-icon.svg" alt="">
-                        </div>
-                        <div class="features-caption">
-                            <p>Proyectos que fomenten la creatividad y liderazgo.</p>
-                        </div>
-                    </div>
-                    <div class="single-features">
-                        <div class="features-icon">
-                            <img src="assets/img/icon/right-icon.svg" alt="">
-                        </div>
-                        <div class="features-caption">
-                            <p>Iniciativas comunitarias que promueven la responsabilidad social.</p>
-                        </div>
-                    </div>
-
-                    <div class="single-features">
-                        <div class="features-icon">
-                            <img src="assets/img/icon/right-icon.svg" alt="">
-                        </div>
-                        <div class="features-caption">
-                            <p>Join millions of people from around the world learning together. Online learning is as easy and natural.</p>
-                        </div>
-                    </div>
+                    
+                    
                 </div>
                 <div class="right-content1">
                     <!-- img -->
