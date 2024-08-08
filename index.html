@@ -69,11 +69,37 @@
         }
     }
 
-    .carousel-inner > .item > img,
+    /*.carousel-inner > .item > img,
     .carousel-inner > .item > a > img {
       width: 60%;
       margin: auto;
-  }
+  }*/
+
+
+  .carousel-inner > .item > img,
+.carousel-inner > .item > a > img {
+    width: 100%; /* Ajusta al 100% del contenedor */
+    max-width: 1000px; /* Ancho máximo para pantallas grandes */
+    height: auto; /* Mantiene la proporción de la imagen */
+    margin: auto;
+}
+
+    /* Ajustes específicos para pantallas más grandes */
+    @media (min-width: 768px) {
+        .carousel-inner > .item > img,
+        .carousel-inner > .item > a > img {
+            width: 80%; /* Ajusta este valor según el tamaño deseado */
+            max-width: 800px; /* Ancho máximo para pantallas medianas */
+        }
+    }
+
+    @media (min-width: 1024px) {
+        .carousel-inner > .item > img,
+        .carousel-inner > .item > a > img {
+            width: 70%; /* Ajusta este valor según el tamaño deseado */
+            max-width: 900px; /* Ancho máximo para pantallas grandes */
+        }
+    }
 
 
     </style>
