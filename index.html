@@ -69,12 +69,25 @@
         }
     }
 
-    /* imagen */
-    .carousel-inner > .item > img,
-    .carousel-inner > .item > a > img {
-      width: 30%;
-      margin: auto;
-  }
+     /* Estilos específicos para las imágenes del carrusel */
+     .carousel-image {
+        width: 50%; /* Ajusta el ancho de las imágenes del carrusel */
+        max-height: 400px; /* Ajusta la altura máxima de las imágenes del carrusel */
+        object-fit: cover; /* Asegura que la imagen cubra el contenedor sin distorsionarse */
+        margin: auto;
+    }
+
+    @media (min-width: 500px) {
+        .carousel-image {
+            max-height: 500px; /* Ajusta la altura máxima para pantallas medianas */
+        }
+    }
+
+    @media (min-width: 800px) {
+        .carousel-image {
+            max-height: 600px; /* Ajusta la altura máxima para pantallas grandes */
+        }
+    }
 
     </style>
     
