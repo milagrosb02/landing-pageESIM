@@ -89,6 +89,56 @@
         }
     }
 
+
+    /* sacar si no funciona */
+    .info-panel {
+    display: none;
+    position: absolute;
+    bottom: 120%; /* Asegura que el panel esté justo debajo del botón */
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.7); /* Fondo traslúcido */
+    color: white !important; /* Texto en blanco */
+    padding: 10px;
+    border-radius: 8px;
+    width: 90%; /* Panel largo y rectangular */
+    max-width: 600px; /* Ancho máximo */
+    z-index: 10; /* Asegura que el panel esté por encima de otros elementos */
+    text-align: center;
+    white-space: normal; /* Ajusta el texto dentro del panel */
+    word-wrap: break-word; /* Evita que el texto salga del panel */
+    box-sizing: border-box; /* Incluye padding dentro del ancho total */
+}
+
+.btn-more-info {
+    z-index: 11;
+    position: relative;
+}
+
+/* Estilos para pantallas pequeñas */
+@media (max-width: 767px) {
+    .btn-more-info-container {
+        position: relative;
+        width: 100%; /* Asegura que el contenedor ocupe el ancho completo */
+    }
+
+    .info-panel {
+        bottom: 120%; /* Ajusta la posición si es necesario */
+        width: 100%; /* Asegura que el panel no sea más ancho que el contenedor */
+        max-width: none; /* Elimina el ancho máximo para que el panel se ajuste */
+        font-size: 14px; /* Ajusta el tamaño del texto si es necesario */
+    }
+
+    .btn-more-info {
+        display: block; /* Asegura que el botón sea visible */
+        width: 100%; /* Ajusta el ancho del botón si es necesario */
+    }
+}
+
+.info-panel p {
+    color: white !important; /* Asegura que el color blanco se aplique al texto dentro del panel */
+}
+
     
 
     </style>
@@ -622,6 +672,7 @@
                                 todo aquello que sirva de soporte a la mejora permanente del servicio educativo.
                             </p>
                         </div>
+                        
                     </div>
                 </div>
             </div>
@@ -732,6 +783,16 @@
 <!-- Jquery Plugins, main Jquery -->	
 <script src="./assets/js/plugins.js"></script>
 <script src="./assets/js/main.js"></script>
+
+<!-- sacar si no funciona -->
+<script>
+    document.querySelectorAll('.btn-more-info').forEach(function(button) {
+    button.addEventListener('click', function() {
+        var panel = this.nextElementSibling;
+        panel.style.display = panel.style.display === 'block' ? 'none' : 'block';
+    });
+});
+</script>
 
 </body>
 </html>
