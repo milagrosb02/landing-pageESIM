@@ -90,56 +90,111 @@
     }
 
 
-    /* sacar si no funciona */
-    .info-panel {
-    display: none;
-    position: absolute;
-    bottom: 120%; /* Asegura que el panel esté justo debajo del botón */
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: rgba(0, 0, 0, 0.7); /* Fondo traslúcido */
-    color: white !important; /* Texto en blanco */
-    padding: 10px;
-    border-radius: 8px;
-    width: 90%; /* Panel largo y rectangular */
-    max-width: 600px; /* Ancho máximo */
-    z-index: 10; /* Asegura que el panel esté por encima de otros elementos */
-    text-align: center;
-    white-space: normal; /* Ajusta el texto dentro del panel */
-    word-wrap: break-word; /* Evita que el texto salga del panel */
-    box-sizing: border-box; /* Incluye padding dentro del ancho total */
-}
-
-.btn-more-info {
-    z-index: 11;
-    position: relative;
-}
-
-/* Estilos para pantallas pequeñas */
-@media (max-width: 767px) {
-    .btn-more-info-container {
-        position: relative;
-        width: 100%; /* Asegura que el contenedor ocupe el ancho completo */
-    }
-
-    .info-panel {
-        bottom: 120%; /* Ajusta la posición si es necesario */
-        width: 100%; /* Asegura que el panel no sea más ancho que el contenedor */
-        max-width: none; /* Elimina el ancho máximo para que el panel se ajuste */
-        font-size: 14px; /* Ajusta el tamaño del texto si es necesario */
-    }
-
+    /* estilos recieen agregados */
+    /* Estilos del botón "Más info" */
     .btn-more-info {
+        margin-top: 20px;
+        z-index: 11; /* Asegura que el botón esté por encima del panel */
+        position: relative; /* Necesario para el posicionamiento del panel */
         display: block; /* Asegura que el botón sea visible */
-        width: 100%; /* Ajusta el ancho del botón si es necesario */
+        /* Añadido para asegurar que el botón sea visible en móviles */
+        padding: 10px 20px;
+        font-size: 16px;
+    }
+
+    /* Estilos del panel de información */
+    .info-panel {
+        display: none; /* Oculto por defecto */
+        position: absolute;
+        bottom: 0; /* Ajusta la posición del panel para que se muestre correctamente */
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: rgba(0, 0, 0, 0.7); /* Fondo traslúcido */
+        color: white !important; /* Texto en blanco */
+        padding: 10px;
+        border-radius: 8px;
+        width: 90%; /* Panel largo y rectangular */
+        max-width: 600px; /* Ancho máximo */
+        z-index: 10; /* Asegura que el panel esté por encima de otros elementos */
+        text-align: center;
+        white-space: normal; /* Ajusta el texto dentro del panel */
+        word-wrap: break-word; /* Evita que el texto salga del panel */
+        box-sizing: border-box; /* Incluye padding dentro del ancho total */
+    }
+
+    /* Mostrar el panel de información cuando el botón es clicado */
+    .carousel-item.active .info-panel.show {
+        display: block; /* Muestra el panel */
+    }
+
+    /* Ajustes para la visibilidad en móviles */
+    @media (max-width: 768px) {
+        .carousel-caption {
+            text-align: center; /* Alinea el texto en el centro */
+        }
+
+        .btn-more-info {
+            width: 100%; /* Botón ocupa todo el ancho en móviles */
+            font-size: 14px; /* Tamaño de fuente más pequeño */
+            
+        }
+
+        .btn-info.btn-more-info:hover {
+        background-color: #b2b500 !important; /* Color de fondo al pasar el mouse */
+        border-color: #005f8c !important; /* Color del borde al pasar el mouse */
+    }
+
+    .info-panel {
+        bottom: 10%; /* Ajusta la posición del panel en móviles */
+        width: 80%; /* Ajusta el ancho del panel en móviles */
     }
 }
 
 .info-panel p {
     color: white !important; /* Asegura que el color blanco se aplique al texto dentro del panel */
 }
-
     
+.modal {
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        display: none;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .modal-content {
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 5px;
+        width: 80%;
+        max-width: 600px;
+        position: relative;
+        border: 3px solid #00a2e1;
+        border-radius: 10px;
+    }
+
+
+    .close-btn {
+        position: absolute;
+        top: 1.5px;
+        right: 5px;
+        cursor: pointer;
+        font-size: 20px;
+        background-color: #00a2e1; /* color */
+        color: #fff;
+
+        /* nuevos estilos agregados */
+        border-radius: 50%;
+        width: 25px;
+        height: 25px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
 
     </style>
     
@@ -250,34 +305,27 @@
         <!-- INICIO CARRUSEL DE FOTOS -->
         <section class="carousel-area section-padding40">
             <div class="container">
-                <div class="section-tittle text-center mb-55">
-                    <h1>Eventos de Agosto</h1>
+                <div class="col-xl-7 col-lg-8">
+                    <div class="section-tittle text-center mb-55">
+                        <h2>Eventos de Agosto</h2>
+                    </div>
                 </div>
-            </div>
-            <div class="container">
                 <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
                     <ol class="carousel-indicators">
                         <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
                         <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
                         <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
                     </ol>
-                    
-
+        
                     <div class="carousel-inner">
-
-                        
-                        <div class="carousel-item active">
+                        <div class="carousel-item active" data-slide-to="0">
                             <img class="d-block w-100 carousel-image" src="assets/img/gallery/peña.jpeg" alt="First slide">
                         </div>
-                        
-                        
-                        <div class="carousel-item">
+                        <div class="carousel-item" data-slide-to="1">
                             <img class="d-block w-100 carousel-image" src="assets/img/gallery/expo.jpeg" alt="Second slide">
                         </div>
-
-        
-
                     </div>
+        
                     <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
                         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                         <span class="sr-only">Previous</span>
@@ -287,9 +335,18 @@
                         <span class="sr-only">Next</span>
                     </a>
                 </div>
+                <button class="btn btn-info btn-more-info" style="background-color: #00a2e1; ">Más info</button>
             </div>
         </section>
 
+        <!-- Modal -->
+        <div id="info-modal" class="modal" style="display: none;">
+            <div class="modal-content">
+                <span class="close-btn">&times;</span>
+                <p id="modal-text">Aquí va la información correspondiente...</p>
+            </div>
+        </div>
+        
         <!-- FIN CARRUSEL DE FOTOS -->
 
 
@@ -740,7 +797,7 @@
   <!-- Scroll Up -->
   <div id="back-top" >
     <a title="Go to Top" href="#"> <i class="fas fa-level-up-alt"></i></a>
-</div>
+  </div>
 
 <!-- JS here -->
 <script src="./assets/js/vendor/modernizr-3.5.0.min.js"></script>
@@ -784,15 +841,40 @@
 <script src="./assets/js/plugins.js"></script>
 <script src="./assets/js/main.js"></script>
 
-<!-- sacar si no funciona -->
 <script>
-    document.querySelectorAll('.btn-more-info').forEach(function(button) {
-    button.addEventListener('click', function() {
-        var panel = this.nextElementSibling;
-        panel.style.display = panel.style.display === 'block' ? 'none' : 'block';
+
+    const modal = document.getElementById('info-modal');
+    const modalText = document.getElementById('modal-text');
+    const moreInfoBtn = document.querySelector('.btn-more-info');
+    const closeBtn = document.querySelector('.close-btn');
+
+    const infoData = [
+        "Esta jornada está pensada como espacio de encuentro entre la institución,  las familias, los alumnos y los artistas locales. Es una oportunidad para conocer, disfrutar y enriquecernos con las diferentes manifestaciones culturales locales. Como así también se busca visibilizar las producciones que los alumnos fueron realizando en el transcurso del año en el Campus de artística en un contexto social y cultural amplio. ",
+        "La nueva edición de la expo feria, que reúne al sector educativo superior de la ciudad de Posadas y en la que se visibiliza al público la amplia variedad de carreras de pregrado, grado y especializaciones de instituciones y universidades, se desarrollará del 21 al 23 de agosto de 8 a 17 en la Cascada artificial de la Costanera. La Universidad Nacional de Misiones participará a través del departamento de Orientación Universitaria para dar a conocer toda su oferta académica, tendrá un stand con folletería, charlas y guía de lo que ofrece la UNaM.",
+        "Información sobre la tercera imagen."
+    ];
+
+    function openModal(index) {
+        modalText.textContent = infoData[index];
+        modal.style.display = 'flex';
+    }
+
+    moreInfoBtn.addEventListener('click', () => {
+        const activeIndex = document.querySelector('.carousel-item.active').getAttribute('data-slide-to');
+        openModal(activeIndex);
     });
-});
+
+    closeBtn.addEventListener('click', () => {
+        modal.style.display = 'none';
+    });
+
+    window.addEventListener('click', (event) => {
+        if (event.target === modal) {
+            modal.style.display = 'none';
+        }
+    });
 </script>
+
 
 </body>
 </html>
