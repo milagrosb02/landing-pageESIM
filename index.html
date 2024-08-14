@@ -91,6 +91,7 @@
 
 
     /* estilos recieen agregados */
+<<<<<<< HEAD
     /* Estilos del botón "Más info" */
     .btn-more-info {
         margin-top: 20px;
@@ -148,6 +149,34 @@
         bottom: 10%; /* Ajusta la posición del panel en móviles */
         width: 80%; /* Ajusta el ancho del panel en móviles */
     }
+=======
+    .btn-more-info {
+        margin-top: 20px;
+    }
+
+    .info-panel {
+    display: none;
+    position: absolute;
+    bottom: 120%; /* Asegura que el panel esté justo debajo del botón */
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.7); /* Fondo traslúcido */
+    color: white !important; /* Texto en blanco */
+    padding: 10px;
+    border-radius: 8px;
+    width: 90%; /* Panel largo y rectangular */
+    max-width: 600px; /* Ancho máximo */
+    z-index: 10; /* Asegura que el panel esté por encima de otros elementos */
+    text-align: center;
+    white-space: normal; /* Ajusta el texto dentro del panel */
+    word-wrap: break-word; /* Evita que el texto salga del panel */
+    box-sizing: border-box; /* Incluye padding dentro del ancho total */
+}
+
+.btn-more-info {
+    z-index: 11; /* El botón estará por encima del panel */
+    position: relative; /* Esto es necesario para que el panel se posicione correctamente */
+>>>>>>> 16a6426c331b49085a0b0b5e95dc0e20e5c1eac4
 }
 
 .info-panel p {
@@ -305,11 +334,14 @@
         <!-- INICIO CARRUSEL DE FOTOS -->
         <section class="carousel-area section-padding40">
             <div class="container">
+<<<<<<< HEAD
                 <div class="col-xl-7 col-lg-8">
                     <div class="section-tittle text-center mb-55">
                         <h2>Eventos de Agosto</h2>
                     </div>
                 </div>
+=======
+>>>>>>> 16a6426c331b49085a0b0b5e95dc0e20e5c1eac4
                 <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
                     <ol class="carousel-indicators">
                         <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
@@ -318,11 +350,32 @@
                     </ol>
         
                     <div class="carousel-inner">
+<<<<<<< HEAD
                         <div class="carousel-item active" data-slide-to="0">
+=======
+                        <div class="carousel-item active">
+>>>>>>> 16a6426c331b49085a0b0b5e95dc0e20e5c1eac4
                             <img class="d-block w-100 carousel-image" src="assets/img/gallery/peña.jpeg" alt="First slide">
+                            <div class="carousel-caption d-none d-md-block">
+                                <button class="btn btn-info btn-more-info">Más info</button>
+                                <div class="info-panel">
+                                    <p>Esta jornada está pensada como espacio de encuentro entre la institución,  las familias, los alumnos y los artistas locales. Es una oportunidad para conocer, disfrutar y enriquecernos con las diferentes manifestaciones culturales locales. Como así también se busca visibilizar las producciones que los alumnos fueron realizando en el transcurso del año en el Campus de artística en un contexto social y cultural amplio.</p>
+                                </div>
+                            </div>
                         </div>
+<<<<<<< HEAD
                         <div class="carousel-item" data-slide-to="1">
+=======
+        
+                        <div class="carousel-item">
+>>>>>>> 16a6426c331b49085a0b0b5e95dc0e20e5c1eac4
                             <img class="d-block w-100 carousel-image" src="assets/img/gallery/expo.jpeg" alt="Second slide">
+                            <div class="carousel-caption d-none d-md-block">
+                                <button class="btn btn-info btn-more-info">Más info</button>
+                                <div class="info-panel">
+                                    <p>Descripción del evento Expo.</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
         
@@ -338,6 +391,7 @@
                 <button class="btn btn-info btn-more-info" style="background-color: #00a2e1; ">Más info</button>
             </div>
         </section>
+<<<<<<< HEAD
 
         <!-- Modal -->
         <div id="info-modal" class="modal" style="display: none;">
@@ -346,6 +400,8 @@
                 <p id="modal-text">Aquí va la información correspondiente...</p>
             </div>
         </div>
+=======
+>>>>>>> 16a6426c331b49085a0b0b5e95dc0e20e5c1eac4
         
         <!-- FIN CARRUSEL DE FOTOS -->
 
@@ -840,6 +896,15 @@
 <!-- Jquery Plugins, main Jquery -->	
 <script src="./assets/js/plugins.js"></script>
 <script src="./assets/js/main.js"></script>
+<script>
+    document.querySelectorAll('.btn-more-info').forEach(function(button) {
+    button.addEventListener('click', function() {
+        var panel = this.nextElementSibling;
+        panel.style.display = panel.style.display === 'block' ? 'none' : 'block';
+    });
+});
+</script>
+
 
 <script>
 
