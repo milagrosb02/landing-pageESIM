@@ -212,28 +212,22 @@
 
 
      /* estilos del span para la direccion */
-     .team-area .single-cat .cat-cap h5 span {
-        font-size: 20px;  /* Reduce el tamaño del título */
-        font-weight: 500; /* Menos grosor para evitar que se vean tan grandes */
-        color: #4255A4;   /* Mantén el color original o ajusta según el diseño */
-    }
+     .team-area .single-cat .cat-cap h5 {
+    font-size: 20px;   /* Tamaño del título */
+    font-weight: bold; /* Estilo negrita para el título */
+}
 
-    /* Ajuste para los párrafos en .cat-cap p */
-    .team-area .single-cat .cat-cap p {
-        font-size: 14px;  /* Reduce el tamaño del texto */
-        color: #57667e;   /* Mantén el color o ajusta si es necesario */
-        margin: 10px 0;   /* Agrega un margen para mejorar el espacio entre los elementos */
-    }
+.team-area .single-cat .cat-cap h5 span {
+    font-size: inherit;  /* Esto asegura que el span herede el tamaño del h5 */
+    color: #333;         /* Color para el texto del span */
+}
 
-    /* Si es necesario ajustar más en pantallas móviles */
-    @media only screen and (max-width: 575px) {
-        .team-area .single-cat .cat-cap h5 span {
-        font-size: 18px; /* Ajusta el tamaño del título en pantallas pequeñas */
-        }
-        .team-area .single-cat .cat-cap p {
-            font-size: 13px; /* Ajusta el tamaño del párrafo en pantallas pequeñas */
-        }
-    }
+/* Estilos específicos para los párrafos */
+.team-area .single-cat .cat-cap p {
+    font-size: 16px;  /* Asegura que el párrafo mantenga su tamaño original */
+    color: #57667e;   /* Color para el texto del párrafo */
+    margin: 10px 0;   /* Ajuste de márgenes */
+}
 
 
     </style>
