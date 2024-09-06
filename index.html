@@ -158,15 +158,15 @@
         border-color: #005f8c !important; /* Color del borde al pasar el mouse */
     }
 
-    .info-panel {
-        bottom: 10%; /* Ajusta la posición del panel en móviles */
-        width: 80%; /* Ajusta el ancho del panel en móviles */
+        .info-panel {
+            bottom: 10%; /* Ajusta la posición del panel en móviles */
+            width: 80%; /* Ajusta el ancho del panel en móviles */
+        }
     }
-}
 
-.info-panel p {
-    color: white !important; /* Asegura que el color blanco se aplique al texto dentro del panel */
-}
+    .info-panel p {
+        color: white !important; /* Asegura que el color blanco se aplique al texto dentro del panel */
+    }
     
 .modal {
         position: fixed;
@@ -209,6 +209,32 @@
         align-items: center;
         justify-content: center;
     }
+
+
+     /* estilos del span para la direccion */
+     .team-area .single-cat .cat-cap h5 span {
+        font-size: 20px;  /* Reduce el tamaño del título */
+        font-weight: 500; /* Menos grosor para evitar que se vean tan grandes */
+        color: #4255A4;   /* Mantén el color original o ajusta según el diseño */
+    }
+
+    /* Ajuste para los párrafos en .cat-cap p */
+    .team-area .single-cat .cat-cap p {
+        font-size: 14px;  /* Reduce el tamaño del texto */
+        color: #57667e;   /* Mantén el color o ajusta si es necesario */
+        margin: 10px 0;   /* Agrega un margen para mejorar el espacio entre los elementos */
+    }
+
+    /* Si es necesario ajustar más en pantallas móviles */
+    @media only screen and (max-width: 575px) {
+        .team-area .single-cat .cat-cap h5 span {
+        font-size: 18px; /* Ajusta el tamaño del título en pantallas pequeñas */
+        }
+        .team-area .single-cat .cat-cap p {
+            font-size: 13px; /* Ajusta el tamaño del párrafo en pantallas pequeñas */
+        }
+    }
+
 
     </style>
     
@@ -656,7 +682,7 @@
                             <img src="assets/img/direccion/rocio.png" alt="Rectora ESIM">
                         </div>
                         <div class="cat-cap">
-                            <h5><a href="">Rectora: Rocio Quiroga</a></h5>
+                            <h5><span>Rectora: Rocio Quiroga</span></h5>
                             <p>En la Economía del Conocimiento, la creatividad y la innovación son la clave de la evolución humana. Estamos experimentando la riqueza del potencial que tenemos, generando ideas disruptivas y significativas.</p>
                         </div>
                     </div>
@@ -665,7 +691,7 @@
                             <img src="assets/img/direccion/lorena.png" alt="Vicerrectora ESIM">
                         </div>
                         <div class="cat-cap">
-                            <h5><a href="">Vicerrectora Nivel Superior: Lorena Malakoski</a></h5>
+                            <h5><span>Vicerrectora Nivel Superior: Lorena Malakoski</span></h5>
                             <p>La formación de profesionales tiene como centralidad fortalecer la integración de saberes, organizando el aprendizaje de un modo holístico a partir de la construcción de conocimientos, competencias y habilidades en los desafíos que implica la Educación Disruptiva en el nivel superior.</p>
                         </div>
                     </div>
@@ -674,7 +700,7 @@
                             <img src="assets/img/direccion/fabiana.png" alt="Vicedirectora ESIM">
                         </div>
                         <div class="cat-cap">
-                            <h5><a href="">Vicedirectora Nivel Medio: Fabiana Aizcorbe</a></h5>
+                            <h5><span>Vicedirectora Nivel Medio: Fabiana Aizcorbe</span></h5>
                             <p>La innovación no implica solo adoptar una metodología novedosa o utilizar nuevas herramientas, es necesario revisar los fundamentos 
                                 y realizar cambios en los procesos de enseñanza-aprendizaje.
                             </p>
