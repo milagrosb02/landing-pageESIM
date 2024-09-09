@@ -105,15 +105,24 @@
 
 
     /* estilos recieen agregados */
+   .header-area{
+        position: relative;
+        z-index: 1000; /* Asegura que el header esté siempre al frente */
+    }
+
+    .carousel-area {
+        position: relative;
+        overflow: hidden; /* Evita que los elementos salgan de los límites del contenedor */
+        z-index: 1; /* Asegúrate de que esté detrás del header */
+    }
+
     /* Estilos del botón "Más info" */
     .btn-more-info {
-        margin-top: 20px;
-        z-index: 11; /* Asegura que el botón esté por encima del panel */
-        position: relative; /* Necesario para el posicionamiento del panel */
-        display: block; /* Asegura que el botón sea visible */
-        /* Añadido para asegurar que el botón sea visible en móviles */
-        padding: 10px 20px;
-        font-size: 16px;
+        position: absolute;
+        bottom: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 10; /* Por debajo del header, pero por encima de las imágenes del carrusel */
     }
 
     /* Estilos del panel de información */
