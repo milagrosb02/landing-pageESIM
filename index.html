@@ -40,200 +40,227 @@
     
 
     <style>
-        .footer {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        padding: 20px;
-    }
 
-    .footer-icons {
-        display: flex;
-        justify-content: center;
-        margin-bottom: 20px;
-    }
+    /* estilos del footer */
+            .footer {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+        }
 
-    .footer-icon {
-        width: 30px; /* Ajusta según el tamaño de tus iconos */
-        height: auto;
-        margin: 0 10px; /* Espaciado entre iconos */
-    }
+        .footer-icons {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
 
-    .footer-banner {
-        text-align: center;
-        margin-top: 20px;
-        padding: 20px;
-    }
+        .footer-icon {
+            width: 30px; /* Ajusta según el tamaño de tus iconos */
+            height: auto;
+            margin: 0 10px; /* Espaciado entre iconos */
+        }
 
-    .footer-banner img {
-        width: 100%;
-        max-width: 500px; /* Ajusta según sea necesario */
-        height: auto;
-    }
+        .footer-banner {
+            text-align: center;
+            margin-top: 20px;
+            padding: 20px;
+        }
 
-    @media (min-width: 1024px) {
         .footer-banner img {
-            max-width: 600px; /* Ajusta según sea necesario para pantallas más grandes */
+            width: 100%;
+            max-width: 500px; /* Ajusta según sea necesario */
+            height: auto;
         }
-    }
 
-    @media (min-width: 800px) {
-        .footer-banner img {
-            max-width: 700px; /* Ajusta según sea necesario para pantallas aún más grandes */
+        @media (min-width: 1024px) {
+            .footer-banner img {
+                max-width: 600px; /* Ajusta según sea necesario para pantallas más grandes */
+            }
         }
-    }
 
-     /* Estilos específicos para las imágenes del carrusel */
-     .carousel-image {
-        width: 50%; /* Ajusta el ancho de las imágenes del carrusel */
-        max-height: 400px; /* Ajusta la altura máxima de las imágenes del carrusel */
-        object-fit: cover; /* Asegura que la imagen cubra el contenedor sin distorsionarse */
-        margin: auto;
-    }
+        @media (min-width: 800px) {
+            .footer-banner img {
+                max-width: 700px; /* Ajusta según sea necesario para pantallas aún más grandes */
+            }
+        }
 
-    @media (min-width: 720px) {
+    /* fin de los estilos del footer */
+
+
+
+    /* Estilos específicos para el carrusel */
         .carousel-image {
-            max-height: 500px; /* Ajusta la altura máxima para pantallas medianas */
+            width: 50%; /* Ajusta el ancho de las imágenes del carrusel */
+            max-height: 400px; /* Ajusta la altura máxima de las imágenes del carrusel */
+            object-fit: cover; /* Asegura que la imagen cubra el contenedor sin distorsionarse */
+            margin: auto;
         }
-    }
 
-    @media (min-width: 720px) {
-        .carousel-image {
-            max-height: 500px; /* Ajusta la altura máxima para pantallas grandes */
+        @media (min-width: 720px) {
+            .carousel-image {
+                max-height: 500px; /* Ajusta la altura máxima para pantallas medianas */
+            }
         }
-    }
+
+        @media (min-width: 720px) {
+            .carousel-image {
+                max-height: 500px; /* Ajusta la altura máxima para pantallas grandes */
+            }
+        }
 
 
-    /* estilos recieen agregados */
+        .carousel-area {
+            position: relative;
+            overflow: hidden; /* Evita que los elementos salgan de los límites del contenedor */
+            z-index: 1; /* Asegúrate de que esté detrás del header */
+        }
 
-    .carousel-area {
-        position: relative;
-        overflow: hidden; /* Evita que los elementos salgan de los límites del contenedor */
-        z-index: 1; /* Asegúrate de que esté detrás del header */
-    }
+
+        /* Mostrar el panel de información cuando el botón es clicado */
+        .carousel-item.active .info-panel.show {
+            display: block; /* Muestra el panel */
+        }
+    
+    /* fin de estilos del carousel */
+
+
 
     /* Estilos del botón "Más info" */
-    .btn-more-info {
-        position: absolute;
-        bottom: 20px;
-        left: 50%;
-        transform: translateX(-50%);
-        z-index: 10; /* Por debajo del header, pero por encima de las imágenes del carrusel */
-    }
+        .btn-more-info {
+            position: absolute;
+            bottom: -0px; /* Mover el botón más hacia abajo, fuera del carrusel */
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 10;
+            width: 25%;
+            font-size: 14px;
+        }
+
+        
+        .btn-info.btn-more-info:hover {
+            background-color: #b2b500 !important; /* Color de fondo al pasar el mouse */
+            border-color: #005f8c !important; /* Color del borde al pasar el mouse */
+        }
+
+        .close-btn {
+            position: absolute;
+            top: 1.5px;
+            right: 5px;
+            cursor: pointer;
+            font-size: 20px;
+            background-color: #00a2e1; /* color */
+            color: #fff;
+
+            /* nuevos estilos agregados */
+            border-radius: 50%;
+            width: 25px;
+            height: 25px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
 
     
-
+    /* MODAL */
     /* Estilos del panel de información */
-    .info-panel {
-        display: none; /* Oculto por defecto */
-        position: absolute;
-        bottom: 0; /* Ajusta la posición del panel para que se muestre correctamente */
-        left: 50%;
-        transform: translateX(-50%);
-        background-color: rgba(0, 0, 0, 0.7); /* Fondo traslúcido */
-        color: white !important; /* Texto en blanco */
-        padding: 10px;
-        border-radius: 8px;
-        width: 90%; /* Panel largo y rectangular */
-        max-width: 600px; /* Ancho máximo */
-        z-index: 10; /* Asegura que el panel esté por encima de otros elementos */
-        text-align: center;
-        white-space: normal; /* Ajusta el texto dentro del panel */
-        word-wrap: break-word; /* Evita que el texto salga del panel */
-        box-sizing: border-box; /* Incluye padding dentro del ancho total */
-    }
+        .info-panel {
+            display: none; /* Oculto por defecto */
+            position: absolute;
+            bottom: 0; /* Ajusta la posición del panel para que se muestre correctamente */
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: rgba(0, 0, 0, 0.7); /* Fondo traslúcido */
+            color: white !important; /* Texto en blanco */
+            padding: 10px;
+            border-radius: 8px;
+            width: 90%; /* Panel largo y rectangular */
+            max-width: 600px; /* Ancho máximo */
+            z-index: 10; /* Asegura que el panel esté por encima de otros elementos */
+            text-align: center;
+            white-space: normal; /* Ajusta el texto dentro del panel */
+            word-wrap: break-word; /* Evita que el texto salga del panel */
+            box-sizing: border-box; /* Incluye padding dentro del ancho total */
+        }
 
-    /* Mostrar el panel de información cuando el botón es clicado */
-    .carousel-item.active .info-panel.show {
-        display: block; /* Muestra el panel */
-    }
+    
 
     /* Ajustes para la visibilidad en móviles */
-    @media (max-width: 768px) {
-        .carousel-caption {
-            text-align: center; /* Alinea el texto en el centro */
-        }
+        @media (max-width: 768px) {
+            .carousel-caption {
+                text-align: center; /* Alinea el texto en el centro */
+            }
 
-        .btn-more-info {
-            width: 100%; /* Botón ocupa todo el ancho en móviles */
-            font-size: 14px; /* Tamaño de fuente más pequeño */
+            .btn-more-info {
+                width: 100%; /* Botón ocupa todo el ancho en móviles */
+                font-size: 14px; /* Tamaño de fuente más pequeño */
+                
+            }
+
             
+            .info-panel {
+                bottom: 10%; /* Ajusta la posición del panel en móviles */
+                width: 80%; /* Ajusta el ancho del panel en móviles */
+            }
         }
 
-        .btn-info.btn-more-info:hover {
-        background-color: #b2b500 !important; /* Color de fondo al pasar el mouse */
-        border-color: #005f8c !important; /* Color del borde al pasar el mouse */
-    }
-
-        .info-panel {
-            bottom: 10%; /* Ajusta la posición del panel en móviles */
-            width: 80%; /* Ajusta el ancho del panel en móviles */
+        .info-panel p {
+            color: white !important; /* Asegura que el color blanco se aplique al texto dentro del panel */
         }
-    }
-
-    .info-panel p {
-        color: white !important; /* Asegura que el color blanco se aplique al texto dentro del panel */
-    }
     
-    .modal {
-        position: fixed;
-        left: 0;
-        top: 0;
-        width: 100%;
-        height: 100%;
-        background: rgba(0, 0, 0, 0.5);
-        display: none;
-        justify-content: center;
-        align-items: center;
-    }
+        .modal {
+            position: fixed;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            display: none;
+            justify-content: center;
+            align-items: center;
+        }
     
-    .modal-content {
-        background-color: #fff;
-        padding: 20px;
-        border-radius: 5px;
-        width: 80%;
-        max-width: 600px;
-        position: relative;
-        border: 3px solid #00a2e1;
-        border-radius: 10px;
-    }
+        .modal-content {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            width: 80%;
+            max-width: 600px;
+            position: relative;
+            border: 3px solid #00a2e1;
+            border-radius: 10px;
+        }
 
+    /*fin de los estilos para el modal  */
 
-    .close-btn {
-        position: absolute;
-        top: 1.5px;
-        right: 5px;
-        cursor: pointer;
-        font-size: 20px;
-        background-color: #00a2e1; /* color */
-        color: #fff;
+    
+    /* Estilos del span para la direccion */
+            .team-area .single-cat .cat-cap h5 {
+            font-size: 20px;   /* Tamaño del título */
+            font-weight: bold; /* Estilo negrita para el título */
+        }
 
-        /* nuevos estilos agregados */
-        border-radius: 50%;
-        width: 25px;
-        height: 25px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
+        .team-area .single-cat .cat-cap h5 span {
+            font-size: inherit;  /* Esto asegura que el span herede el tamaño del h5 */
+            color: #57667e;         /* Color para el texto del span */
+        }
 
+    
+        .team-area .single-cat .cat-cap p {
+            font-size: 16px;  /* Asegura que el párrafo mantenga su tamaño original */
+            color: #57667e;   /* Color para el texto del párrafo */
+            margin: 10px 0;   /* Ajuste de márgenes */
+        }
 
-        /* estilos del span para la direccion */
-        .team-area .single-cat .cat-cap h5 {
-        font-size: 20px;   /* Tamaño del título */
-        font-weight: bold; /* Estilo negrita para el título */
-    }
-
-    .team-area .single-cat .cat-cap h5 span {
-        font-size: inherit;  /* Esto asegura que el span herede el tamaño del h5 */
-        color: #57667e;         /* Color para el texto del span */
-    }
-
-    /* Estilos específicos para los párrafos */
-    .team-area .single-cat .cat-cap p {
-        font-size: 16px;  /* Asegura que el párrafo mantenga su tamaño original */
-        color: #57667e;   /* Color para el texto del párrafo */
-        margin: 10px 0;   /* Ajuste de márgenes */
+        
+        @media only screen and (max-width: 575px) {
+        .team-area .single-cat .cat-cap h5 span {
+        font-size: 18px; /* Ajusta el tamaño del título en pantallas pequeñas */
+        }
+        .team-area .single-cat .cat-cap p {
+            font-size: 13px; /* Ajusta el tamaño del párrafo en pantallas pequeñas */
+        }
     }
 
 
