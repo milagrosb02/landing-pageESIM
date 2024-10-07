@@ -1,0 +1,35 @@
+
+        .left-img {
+            text-align: center;
+        }
+
+        .left-img img {
+            display: inline-block;
+            max-width: 100%;
+            height: auto;
+        }
+
+        .hero__caption2 {
+            margin-top: 60px;
+        }
+
+        .button-back {
+            margin-top: 20px;
+        }
+
+        @media (max-width: 767px) {
+            .hero__caption2 {
+                margin-top: 20px;
+            }
+            
+            .button-back {
+                text-align: center;
+                margin-top: 10px;
+            }
+
+            .left-img img {
+                width: 100%;
+                max-width: none;
+            }
+        }
+   
