@@ -39,7 +39,8 @@
 
 
     <style>
-                /* estilos del footer */
+
+        /* estilos del footer */
         .footer {
             display: flex;
             flex-direction: column;
@@ -84,6 +85,44 @@
         }
 
         /* fin de lo estilos del footer */
+
+
+
+        /* inicio de estilos single cat direccion */
+            
+            .single-cat {
+                border: 1px solid #e1e1e1;
+                padding: 20px;
+                margin-bottom: 20px;
+                border-radius: 8px;
+                background-color: #f9f9f9;
+                transition: transform 0.3s ease;
+            }
+
+            /* estilos del span para la direccion */
+            .team-area .single-cat .cat-cap h5 span {
+                font-size: 20px;  /* Reduce el tamaño del título */
+                font-weight: 500; /* Menos grosor para evitar que se vean tan grandes */
+                color: #4255A4;   /* Mantén el color original o ajusta según el diseño */
+            }
+
+            /* Ajuste para los párrafos en .cat-cap p */
+            .team-area .single-cat .cat-cap p {
+                font-size: 14px;  /* Reduce el tamaño del texto */
+                color: #57667e;   /* Mantén el color o ajusta si es necesario */
+                margin: 10px 0;   /* Agrega un margen para mejorar el espacio entre los elementos */
+            }
+
+            /* Si es necesario ajustar más en pantallas móviles */
+            @media only screen and (max-width: 575px) {
+                .team-area .single-cat .cat-cap h5 span {
+                font-size: 18px; /* Ajusta el tamaño del título en pantallas pequeñas */
+                }
+                .team-area .single-cat .cat-cap p {
+                    font-size: 13px; /* Ajusta el tamaño del párrafo en pantallas pequeñas */
+                }
+            }
+        /* fin estilos single cat direccion */
 
     </style>
     
