@@ -39,7 +39,61 @@
     <link rel="stylesheet" href="assets/css/nice-select.css">
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/estilos/estilos_profe_personalizados.css">
-    
+
+     <!-- estilos del footer -->
+     <style>
+        /* Asegúrate de que el html y body ocupen el 100% de la pantalla */
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh; /* Asegura que el body cubra toda la altura de la ventana */
+        }
+
+        main {
+            flex-grow: 1; /* El main toma el espacio restante si el contenido es pequeño */
+        }
+
+        footer {
+            background-color: #57B093; /* Cambia el color del footer a tu preferencia */
+            color: white;
+            padding: 20px;
+            text-align: center;
+            width: 100%;
+        }
+
+        /* Ejemplo de estilos para el contenido del footer */
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* Asegúrate de que las imágenes o banners dentro del footer no se desborden */
+        .footer-banner img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .footer-social a {
+            margin: 0 10px;
+            color: white;
+            font-size: 24px;
+            text-decoration: none;
+        }
+
+        /* Para dispositivos pequeños */
+        @media (max-width: 600px) {
+            .footer-social a {
+                font-size: 18px;
+            }
+        }
+
+    </style>
 </head>
 
 <body>
@@ -300,10 +354,27 @@
                        <div class="col-xl-4 col-lg-5 col-md-4 col-sm-6">
                            <div class="single-footer-caption mb-50">
                                <div class="single-footer-caption mb-30">
-                                   <!-- logo -->
-                                   <div class="footer-logo mb-25">
-                                       <a href="index.html"><img src="assets/img/logo/logo final-05.png" alt=""></a>
-                                   </div>
+                                  
+                                    <div class="footer-pera">
+                                        <p>Nuestras redes sociales:</p>
+                                    </div>
+
+                                     <!-- social -->
+                                    <div class="footer-social">
+                                        <a href="https://www.instagram.com/secundariadeinnovacion/" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
+                                        <a href="https://www.facebook.com/secundariainnova" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook-f"></i></a>
+                                        <a href="https://x.com/SecInnovacion" target="_blank" rel="noopener noreferrer"><i class="fab fa-twitter"></i></i></a>
+                                        <a href="https://fttn.short.gy/cZI3cN" target="_blank" rel="noopener noreferrer"><i class="fab fa-whatsapp"></i></a>
+                                        <a href="https://www.youtube.com/@escuelasecundariadeinnovac6939" target="_blank" rel="noopener noreferrer"><i class="fab fa-youtube"></i></a>
+                                    </div>
+
+                                    <!-- banner -->
+                                   <div class="footer-banner">
+                                        <img src="assets/img/gallery/banner.png" alt="Banner">
+                                    </div>
+
+                                </div>
+                                   
                                </div>
                            </div>
                        </div>
