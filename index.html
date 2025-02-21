@@ -259,8 +259,7 @@
         <div class="container">
             <div class="col-xl-7 col-lg-8">
                 <div class="section-tittle text-center mb-55">
-                    <h2>Inscripciones Abiertas</h2>
-                    <p>Para inscribirse, click en la imagen</p>
+                    <h2>Ultimas Noticias</h2>
                 </div>
             </div>
             <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
@@ -271,17 +270,11 @@
 
                 <div class="carousel-inner">
                     <div class="carousel-item active" data-slide-to="0">
-                       <img class="d-block w-100 carousel-image" src="assets/img/gallery/receso.jpg" alt="First slide">
-                   </div>
-                   <div class="carousel-item" data-slide-to="1">
-                       <a href="#" class="carousel-link" data-index="1">
-                       <img class="d-block w-100 carousel-image" src="assets/img/gallery/proffesorado.jpeg" alt="Second slide">
-                   </div>
-                   <div class="carousel-item" data-slide-to="2">
-                       <a href="#" class="carousel-link" data-index="2">
-                           <img class="d-block w-100 carousel-image" src="assets/img/gallery/tecnic.jpeg" alt="Third slide">
-                       </a>
-                   </div>
+                        <img class="d-block w-100 carousel-image" src="assets/img/gallery/calendario.jpg" alt="First slide">
+                    </div>
+                    <div class="carousel-item" data-slide-to="1">
+                        <img class="d-block w-100 carousel-image" src="assets/img/gallery/banner1-28.jpg" alt="Second slide">
+                    </div>
                   
                </div>
 
@@ -805,12 +798,12 @@
 
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script>
-        const linksData = [
-        "",
-        "https://inscripciones.sigi-des.com.ar/preinscripcion/108/58",
-        "https://inscripciones.sigi-des.com.ar/preinscripcion/109/58",
+       // const linksData = [
+       // "",
+       // "https://inscripciones.sigi-des.com.ar/preinscripcion/108/58",
+       // "https://inscripciones.sigi-des.com.ar/preinscripcion/109/58",
         
-    ];
+   // ];
 
     // document.getElementById('moreInfoBtn').addEventListener('click', () => {
     //   const activeIndex = document.querySelector('.carousel-item.active').getAttribute('data-slide-to');
@@ -818,17 +811,17 @@
         //window.open(link, '_blank');
     //});
 
-    document.addEventListener('click', (e) => {
-        if (e.target.classList.contains('carousel-link') || e.target.parentNode.classList.contains('carousel-link')) {
-            let target = e.target;
-            if (!target.classList.contains('carousel-link')) {
-                target = target.parentNode;
-            }
-            const index = target.getAttribute('data-index');
-            const link = linksData[index];
-            window.open(link, '_blank');
-        }
-    });
+    //document.addEventListener('click', (e) => {
+      //  if (e.target.classList.contains('carousel-link') || e.target.parentNode.classList.contains('carousel-link')) {
+        //    let target = e.target;
+          //  if (!target.classList.contains('carousel-link')) {
+            //    target = target.parentNode;
+           // }
+           // const index = target.getAttribute('data-index');
+           // const link = linksData[index];
+           // window.open(link, '_blank');
+       // }
+    //});
 </script>
 
 <!-- Default Statcounter code for Mi pagina web https://web.esim.edu.ar/ -->
