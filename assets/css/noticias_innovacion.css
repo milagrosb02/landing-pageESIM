@@ -3,35 +3,38 @@
   padding: 2rem;
   background-color: #f9f9f9;
   margin-top: 4rem;
+  overflow: hidden; /* importante para evitar corte visual */
 }
 
-.noticias-innovacion h1 {
+.noticias-innovacion h2 {
   font-size: 2rem;
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
   text-align: center;
-  color: #8E44AD; /* Violeta */
+  color: #8E44AD; /* violeta */
 }
 
-/* CARRUSEL FUNCIONAL */
-.carrusel-noticias {
-  display: flex;
-  gap: 1rem;
-  overflow-x: auto;                        /* Permite scroll con el dedo */
+/* Nuevo contenedor externo */
+.carrusel-externo {
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
   padding-bottom: 1rem;
-  scroll-snap-type: x mandatory;
-  animation: deslizar-noticias 25s linear infinite;
-  -webkit-overflow-scrolling: touch;       /* Suavidad iOS */
-  scroll-behavior: smooth;                 /* Suavidad general */
-  scrollbar-width: none;                   /* Oculta barra en Firefox */
-  width: max-content;                      /* Evita que se corten las tarjetas */
 }
-
-/* Oculta scrollbar en navegadores WebKit (Chrome, Safari, Edge) */
-.carrusel-noticias::-webkit-scrollbar {
+.carrusel-externo::-webkit-scrollbar {
   display: none;
 }
 
-/* Tarjeta individual */
+/* Carril animado */
+.carrusel-noticias {
+  display: flex;
+  gap: 1rem;
+  width: max-content;
+  scroll-snap-type: x mandatory;
+  animation: deslizar-noticias 25s linear infinite;
+}
+
+/* Tarjetas */
 .card-noticia {
   min-width: 280px;
   max-width: 300px;
@@ -53,10 +56,11 @@
   font-size: 2rem;
   margin-bottom: 0.5rem;
   color: #E67E22; /* Naranja */
+  text-align: center;
 }
 
-.card-noticia h3 {
-  font-size: 1.1rem;
+.card-noticia h2 {
+  font-size: 1.2rem;
   margin-bottom: 0.5rem;
   color: #3498DB; /* Celeste */
   text-align: center;
@@ -67,33 +71,30 @@
   color: #555;
   margin-bottom: 0.5rem;
   line-height: 1.6;
+  text-align: center;
 }
 
 .card-noticia a {
+  display: block;
   font-size: 1.4rem;
   color: #E91E63; /* Rosa */
   text-decoration: none;
   font-weight: bold;
+  text-align: center;
 }
 
 .card-noticia a:hover {
   text-decoration: underline;
 }
 
-/* Animación automática del carrusel */
+/* Animación automática */
 @keyframes deslizar-noticias {
-  0% {
-    transform: translateX(0);
-  }
-  2% {
-    transform: translateX(0); /* Espera simulada */
-  }
-  100% {
-    transform: translateX(-100%);
-  }
+  0%   { transform: translateX(0); }
+  2%   { transform: translateX(0); }
+  100% { transform: translateX(-100%); }
 }
 
-/* Pausa animación al hacer hover (PC) */
+/* Pausa en PC con hover */
 .carrusel-noticias:hover {
   animation-play-state: paused;
 }
