@@ -93,6 +93,50 @@
             }
         }
 
+        .inscripcion-acceso {
+        background-color: #F8F8F8;
+        padding: 50px 0;
+        margin-bottom: 60px;
+        }
+
+        .titulo-inscripcion {
+        font-size: 2rem;
+        color: #333;
+        margin-bottom: 15px;
+        font-weight: 600;
+        }
+
+        .inscribite-btn {
+        font-size: 1.1rem;
+        padding: 12px 30px;
+        background-color: #57B093;
+        color: white;
+        border-radius: 30px;
+        font-weight: bold;
+        text-transform: uppercase;
+        transition: 0.3s;
+        text-decoration: none;
+        }
+
+        .inscribite-btn:hover {
+        background-color: #479e80;
+        color: #fff;
+        text-decoration: none;
+        }
+
+        /* Línea decorativa bajo la sección */
+       .separador-inscripcion {
+        border-top: 1px solid #ccc;
+        width: 60%;
+        margin: 2rem auto 4rem auto; /* ⬅️ más espacio debajo del <hr> */
+        }
+
+        /* Animación WOW.js (ya tenés la librería) */
+        .wow {
+        visibility: hidden;
+        }
+
+
     </style>
 </head>
 
@@ -158,8 +202,27 @@
                 </div>
             </div>
         </section>
+
+
+      
+
+
         <!-- Courses area start -->
         <div class="courses-area section-padding40 fix">
+
+           <!-- INSCRIPCIÓN -->
+            <section class="inscripcion-acceso text-center wow fadeInUp" data-wow-delay="0.1s">
+                <div class="container">
+                    <h2 class="titulo-inscripcion">INSCRIBITE ACA 👇</h2>
+                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSc_qgII-wkWZt3Me3Ca2zId0dp8QJzqwndustsgABVq7ErVJQ/viewform" class="genric-btn primary radius inscribite-btn">Formulario</a>
+                </div>
+            </section>
+
+        <!-- Línea divisoria -->
+        <hr class="separador-inscripcion">
+
+
+            <br><br>
             <div class="container">
 
                 <div class="support-wrapper align-items-center">
