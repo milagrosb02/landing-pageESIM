@@ -50,6 +50,8 @@
 
 .card-noticia:hover {
   transform: translateY(-5px);
+  background-color: #e3d4ec; /* Violeta claro suave */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
 
 .card-noticia .icono {
