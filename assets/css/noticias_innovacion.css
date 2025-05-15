@@ -87,6 +87,7 @@
 
 .card-noticia a:hover {
   text-decoration: underline;
+  
 }
 
 /* Animación automática */
@@ -99,4 +100,5 @@
 /* Pausa en PC con hover */
 .carrusel-noticias:hover {
   animation-play-state: paused;
+
 }
