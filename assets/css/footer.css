@@ -1,0 +1,131 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    flex-grow: 1;
+}
+
+footer {
+    background-color: #57B093;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    width: 100%;
+}
+
+/* Contenido del footer centrado */
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Redes sociales */
+.footer-social a {
+    margin: 0 10px;
+    color: white;
+    font-size: 24px;
+    text-decoration: none;
+}
+
+/* Banner footer - estilos generales (escritorio) */
+.footer-banner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0;
+    width: 100%;
+}
+
+.footer-banner img {
+    width: 80%;
+    max-width: 900px;
+    height: auto;
+}
+
+/* Ajustes para dispositivos pequeños (hasta 767px) */
+@media (max-width: 767px) {
+  .footer-banner {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    margin-top: 25px !important;
+  }
+
+  .footer-banner img {
+    transform: scale(1.4); /* Aumenta un 10% */
+    transition: transform 0.3s ease;
+  }
+}
+
+
+.footer-social {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-top: 15px;
+}
+
+.footer-social a {
+  width: 36px;
+  height: 36px;
+  font-size: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+@media (max-width: 480px) {
+  .footer-social a {
+    width: 32px;
+    height: 32px;
+    font-size: 20px;
+    margin: 4px;
+  }
+}
+
+
+/* email footer */
+.footer-email {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.footer-email .email-item {
+  flex: 1 1 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 33.33%;
+  text-align: center;
+}
+
+
+.footer-email .email-item i {
+  font-size: 24px;
+  color: white;
+}
+
+.footer-email .email-item p {
+  font-size: 13px;
+  color: white;
+  margin: 5px 0 0;
+  line-height: 1.2;
+  word-wrap: break-word;
+}
+
+
+
+
