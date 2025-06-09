@@ -39,70 +39,9 @@
     <link rel="stylesheet" href="assets/css/nice-select.css">
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/estilos/estilos_inforobo_personalizados.css">
+    <link rel="stylesheet" href="assets/css/footer.css">
     
-     <!-- estilos del footer -->
-     <style>
-        /* Asegúrate de que el html y body ocupen el 100% de la pantalla */
-        html, body {
-            height: 100%;
-            margin: 0;
-            padding: 0;
-        }
-
-        body {
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh; /* Asegura que el body cubra toda la altura de la ventana */
-        }
-
-        main {
-            flex-grow: 1; /* El main toma el espacio restante si el contenido es pequeño */
-        }
-
-        footer {
-            background-color: #57B093; /* Cambia el color del footer a tu preferencia */
-            color: white;
-            padding: 20px;
-            text-align: center;
-            width: 100%;
-        }
-
-        /* Ejemplo de estilos para el contenido del footer */
-        .footer-content {
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        /* Asegúrate de que las imágenes o banners dentro del footer no se desborden */
-        .footer-banner img {
-            max-width: 100%;
-            height: auto;
-        }
-
-        .footer-social a {
-            margin: 0 10px;
-            color: white;
-            font-size: 24px;
-            text-decoration: none;
-        }
-
-        /* Para dispositivos pequeños */
-        @media (max-width: 600px) {
-            .footer-social a {
-                font-size: 18px;
-            }
-        }
-
-        /* estilos para el icono de volver arriba (back to up) */
-        #back-top a:hover {
-            color: #06a66e;
-        }
-
-        #back-top a:active {
-            color: #06a66e;
-        }
-
-    </style>
+    
 </head>
 
 <body>
@@ -279,12 +218,37 @@
                                         <a href="https://x.com/SecInnovacion" target="_blank" rel="noopener noreferrer"><i class="fab fa-twitter"></i></i></a>
                                         <a href="https://fttn.short.gy/cZI3cN" target="_blank" rel="noopener noreferrer"><i class="fab fa-whatsapp"></i></a>
                                         <a href="https://www.youtube.com/@escuelasecundariadeinnovac6939" target="_blank" rel="noopener noreferrer"><i class="fab fa-youtube"></i></a>
-                                    </div>
+                                        
+                                        <!-- Sección de Emails con iconos -->
+                                        
 
-                                    <!-- banner -->
-                                   <div class="footer-banner">
-                                        <img src="assets/img/gallery/banner.png" alt="Banner">
-                                    </div>
+                                        <div class="footer-email" style="display: flex; justify-content: center; margin-top: 20px;">
+                                            <div class="email-item" style="margin: 0 15px; text-align: center;">
+                                                <a href="https://mail.google.com/mail/?view=cm&fs=1&to=sec.innovacion.mnes@gmail.com" target="_blank" rel="noopener noreferrer">
+                                                    <i class="fas fa-envelope" style="font-size: 24px; color: white;"></i>
+                                                </a>
+                                                  
+                                              <p style="margin: 5px 0 0; font-size: 14px; color: white;">Nivel Superior</p>
+                                            </div>
+                                            <div class="email-item" style="margin: 0 15px; text-align: center;">
+                                                <a href="https://mail.google.com/mail/?view=cm&fs=1&to=superior@esim.edu.ar" target="_blank" rel="noopener noreferrer">
+                                                    <i class="fas fa-envelope" style="font-size: 24px; color: white;"></i>
+                                                </a>
+                                                  
+                                              <p style="margin: 5px 0 0; font-size: 14px; color: white;">Info / CV</p>
+                                              
+                                            </div>
+
+                                            <!-- PROFESORADO TECNICO -->
+                                            <div class="email-item" style="margin: 0 15px; text-align: center;">
+                                                <a href="https://mail.google.com/mail/?view=cm&fs=1&to=formacioncontinua@esim.edu.ar" target="_blank" rel="noopener noreferrer">
+                                                    <i class="fas fa-envelope" style="font-size: 24px; color: white;"></i>
+                                                </a>
+                                                  
+                                              <p style="margin: 5px 0 0; font-size: 14px; color: white;">Formación Continua (Informes)</p>
+                                              
+                                            </div>
+                                          </div>
 
                                 </div>
                                    
@@ -292,7 +256,10 @@
                            </div>
                        </div>
                        
-                       
+                        <!-- banner -->
+                        <div class="footer-banner" style="margin-top: 25px;">
+                            <img src="assets/img/logo/new_banner.png" alt="Banner">
+                        </div>
                        
                    </div>
                </div>
@@ -314,8 +281,11 @@
                  </div>
              </div>
              <!-- Footer End-->
-         </div>
+         </div> 
+          
+    
      </footer> 
+  
     <!-- Scroll Up -->
     <div id="back-top" >
        <a title="Go to Top" href="#"> <i class="fas fa-level-up-alt"></i></a>
