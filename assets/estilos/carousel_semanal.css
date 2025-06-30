@@ -1,0 +1,46 @@
+.actividades-semanales {
+  background-color: #f9f9f9;
+}
+
+.card-actividad {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  text-align: center;
+  padding: 10px;
+}
+
+.card-actividad img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.card-actividad .descripcion {
+  font-size: 14px;
+  color: #444;
+  padding-top: 10px;
+  margin-bottom: 0;
+}
+
+/* ajustar espaciado del carrusel */
+.owl-carousel .owl-item {
+  padding: 10px;
+}
+
+/* título */
+.actividades-semanales h2 {
+  font-weight: 600;
+  color: #4255a4;
+  margin-top: 8rem;
+}
+
+.titulo-actividad {
+    margin-top: 12px; /* 🔼 separa el título de la imagen */
+    font-size: 16px;
+    font-weight: 600;
+    color: #3d5fe6;
+}
+
