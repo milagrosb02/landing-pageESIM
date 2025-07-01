@@ -1,35 +1,125 @@
+/* --- TECNICATURA ESTILOS PERSONALIZADOS --- */
 
-        .left-img {
-            text-align: center;
-        }
+.section-tittle2 h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    padding-bottom: 0.9rem;
+    border-bottom: 2px solid #d4d4d4;
+}
 
-        .left-img img {
-            display: inline-block;
-            max-width: 100%;
-            height: auto;
-        }
+.section-tittle2 p {
+    font-size: 1.1rem;
+    margin-top: 1.2rem;
+    margin-bottom: 1.5rem;
+}
 
-        .hero__caption2 {
-            margin-top: 60px;
-        }
+.section-tittle2 {
+    margin-bottom: 1.5rem;
+}
 
-        .button-back {
-            margin-top: 20px;
-        }
+/* Ajuste de espaciado entre títulos h2 consecutivos */
+.section-tittle2 + .section-tittle2 {
+    margin-top: 3rem;
+}
 
-        @media (max-width: 767px) {
-            .hero__caption2 {
-                margin-top: 20px;
-            }
-            
-            .button-back {
-                text-align: center;
-                margin-top: 10px;
-            }
+/* Ajuste de listas generales */
+.section-tittle2 ul {
+    margin-top: 0.5rem;
+    margin-bottom: 2rem;
+    padding-left: 1.2rem;
+}
 
-            .left-img img {
-                width: 100%;
-                max-width: none;
-            }
-        }
-   
+.mt-separador {
+    margin-top: 3rem; /* Ajustá según cuánto espacio quieras */
+}
+
+
+.single-features {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.features-icon img {
+    width: 22px;
+    height: 22px;
+    margin-top: 4px;
+}
+
+.features-caption p {
+    margin: 0;
+    font-size: 1.05rem;
+}
+
+/* Línea divisoria */
+.division-tramo {
+    border: none;
+    border-top: 2px solid #d4d4d4;
+    margin: 3rem 0 2.5rem 0;
+}
+
+/* Imagen curricular */
+.left-img {
+    text-align: center;
+}
+
+.left-img img {
+    display: inline-block;
+    max-width: 100%;
+    height: auto;
+}
+
+.left-img img {
+    max-width: 90%;
+}
+
+/* --- HEADER SLIDER COMPACTO --- */
+.slider-height2 {
+    min-height: auto !important;
+    height: auto !important;
+    padding: 10px 0 !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero__caption2 {
+    padding: 0 !important;
+    margin: 0 !important;
+    text-align: center;
+}
+
+.hero__caption2 h1 {
+    font-size: 1.2rem !important;
+    line-height: 1.9 !important;
+    text-align: center !important;
+    margin: 2rem auto 4rem auto !important;
+    max-width: 900px;
+    padding: 0 1rem;
+    width: 100%;
+}
+
+.button-back {
+    margin-top: 20px;
+    text-align: center;
+}
+
+/* Responsive */
+@media (max-width: 767px) {
+    .hero__caption2 h1 {
+        font-size: 1.1rem !important;
+        line-height: 1.8 !important;
+        margin: 1rem auto 2.5rem auto !important;
+    }
+
+    .button-back {
+        margin-top: 10px;
+    }
+
+    .left-img img {
+        width: 100%;
+        max-width: none;
+    }
+}
