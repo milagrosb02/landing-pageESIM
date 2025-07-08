@@ -1,36 +1,110 @@
 
-        .left-img {
-            text-align: center; /* Centra la imagen horizontalmente */
-        }
+/* Ajustes para PROFESORADO */
 
-        .left-img img {
-            display: inline-block; /* Asegura que la imagen se centre correctamente */
-            max-width: 100%; /* Ajusta el tamaño de la imagen al contenedor */
-            height: auto; /* Mantiene la proporción de la imagen */
-        }
+/* Slider: achicar altura + centrar texto */
+.slider-height2 {
+    min-height: auto !important;
+    height: auto !important;
+    padding: 10px 0 !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
-        /* Margen superior para evitar superposición */
-        .hero__caption2 {
-            margin-top: 60px; /* Ajusta este valor según sea necesario */
-        }
-        
-        /* Estilos específicos para el botón "Volver Atrás" */
-        .button-back {
-            margin-top: 20px;
-        }
+.hero__caption2 {
+    padding: 0 !important;
+    margin: 0 !important;
+    text-align: center;
+}
 
-        @media (max-width: 767px) {
-            .button-back {
-                text-align: center;
-                margin-top: 10px;
-            }
+.hero__caption2 h1 {
+    font-size: 1.2rem !important;
+    line-height: 1.9 !important;
+    text-align: center !important;
+    margin: 0.4rem auto 2rem auto !important; /* antes decía 9rem */
+    max-width: 900px;
+    padding: 0 1rem;
+    width: 100%;
+}
 
-            .hero__caption2 {
-                margin-top: 20px;
-            }
 
-            .left-img img {
-                max-width: 90%; /* Ajusta el tamaño de la imagen al contenedor en dispositivos móviles */
-            }
-        }
-    
+.section-tittle.mb-55 {
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+}
+
+
+/* Botón "Volver Atrás" */
+.button-back {
+    margin-top: 0;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+/* Secciones */
+.section-tittle2 h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    padding-bottom: 0.9rem;
+    border-bottom: 2px solid #d4d4d4;
+}
+
+.section-tittle2 p {
+    font-size: 1.1rem;
+    margin-top: 0.8rem;
+    margin-bottom: 2rem;
+}
+
+.single-features {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.features-icon img {
+    width: 22px;
+    height: 22px;
+    margin-top: 4px;
+}
+
+.features-caption p {
+    margin: 0;
+    font-size: 1.05rem;
+}
+
+.division-tramo,
+.division-curricular {
+    border: none;
+    border-top: 2px solid #d4d4d4;
+    margin: 3rem 0 2.5rem 0;
+}
+
+.left-img {
+    text-align: center;
+}
+
+.left-img img {
+    max-width: 90%;
+    height: auto;
+    display: inline-block;
+}
+
+/* Responsive */
+@media (max-width: 767px) {
+    .hero__caption2 h1 {
+        font-size: 1rem !important;
+        margin: 0.5rem auto 6rem auto !important;
+    }
+    .section-tittle2 h2 {
+        font-size: 1.6rem;
+    }
+    .section-tittle2 p {
+        font-size: 1rem;
+    }
+    .features-caption p {
+        font-size: 1rem;
+    }
+}
+
