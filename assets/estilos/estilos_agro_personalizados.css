@@ -1,35 +1,237 @@
+/* Slider: achicar altura + centrar texto */
+.slider-height2 {
+    min-height: auto !important;
+    height: auto !important;
+    padding: 10px 0 !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
-        /* Margen superior para evitar superposición */
-        .hero__caption2 {
-            margin-top: 60px; /* Ajusta este valor según sea necesario */
-        }
-        
-        /* Estilos específicos para el botón "Volver Atrás" */
-        .button-back {
-            margin-top: 20px;
-        }
+.hero__caption2 {
+    padding: 0 !important;
+    margin: 0 !important;
+    text-align: center;
+}
 
-        @media (max-width: 767px) {
-            .button-back {
-                text-align: center;
-                margin-top: 10px;
-            }
-
-            .hero__caption2 {
-                margin-top: 20px;
-            }
-        }
+.hero__caption2 h1 {
+    font-size: 2.5rem !important;
+    line-height: 1.9 !important;
+    text-align: center !important;
+    margin: 0.4rem auto 2rem auto !important; /* antes decía 9rem */
+    max-width: 900px;
+    padding: 0 1rem;
+    width: 100%;
+}
 
 
-         /* Estilos para las imágenes en dispositivos móviles */
-        .responsive-img {
-                width: 100%;
-                height: auto;
-            }
 
-        .left-img img {
-            width: 100%;
-            max-width: none;
-        }
-        
-    
+/* h2 */
+.section-tittle2 h2 {
+    font-size: 34px;
+    color: #3728a8;
+    font-weight: 800;
+    margin-bottom: 25px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* h3 */
+.section-tittle2 h3 {
+    font-size: 26px;
+    color: #2d6a4f;
+    font-weight: 700;
+    margin-bottom: 20px;
+    border-left: 5px solid #95d5b2;
+    padding-left: 12px;
+}
+
+.section-padding45 {
+    padding-top: 45px;
+    padding-bottom: 40px; /* Podés ajustar esto también */
+}
+
+
+.section-tittle.mb-55 {
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+}
+
+
+/* Botón "Volver Atrás" */
+.button-back {
+    margin-top: 0;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+/* Secciones */
+.section-tittle2 h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    padding-bottom: 0.9rem;
+    border-bottom: 2px solid #d4d4d4;
+}
+
+.section-tittle2 p {
+    font-size: 1.1rem;
+    margin-top: 0.8rem;
+    margin-bottom: 2rem;
+}
+
+.single-features {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.features-icon img {
+    width: 22px;
+    height: 22px;
+    margin-top: 4px;
+}
+
+.features-caption p {
+    margin: 0;
+    font-size: 1.05rem;
+}
+
+.division-tramo,
+.division-curricular {
+    border: none;
+    border-top: 2px solid #d4d4d4;
+    margin: 3rem 0 2.5rem 0;
+}
+
+.left-img {
+    text-align: center;
+}
+
+.left-img img {
+    max-width: 90%;
+    height: auto;
+    display: inline-block;
+}
+
+/* Responsive */
+@media (max-width: 500px) {
+    /* Elimina padding superior innecesario de la sección siguiente */
+    .section-padding40,
+    .section-padding45,
+    .section-padding60 {
+        padding-top: 20px !important;
+    }
+
+    /* Opcional: reduce un poco más el h1 si hace falta */
+    .hero__caption2 h1 {
+        margin-bottom: 1rem !important;
+    }
+
+    /* Opcional: baja el botón para que quede pegado al h1 */
+    .button-back {
+        margin-top: 0.5rem;
+        margin-bottom: 1rem;
+    }
+}
+
+
+/* carousel */
+/* Carousel - Opción 3: object-fit: cover con max-width */
+.carousel-wrapper {
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+    background-color: #fff;
+    padding: 0;
+    margin-top: 0;
+    max-width: 960px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.carousel-image {
+    object-fit: cover;
+    width: 100%;
+    height: 400px;
+}
+
+.carousel-indicators li {
+    background-color: #57B093;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+}
+
+.carousel-indicators .active {
+    background-color: #005f4b;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    filter: invert(1);
+    background-size: 100% 100%;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    width: 5%;
+}
+
+@media (max-width: 768px) {
+    .carousel-image {
+        height: auto;
+       max-height: 300px;
+        object-fit: contain;
+        background-color: #fff; 
+    }
+} 
+
+
+.carousel-indicators {
+    bottom: -30px; 
+}
+
+/* clic en la imagen */
+@media (max-width: 768px) {
+  #preview-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.95);
+    z-index: 9999;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #preview-overlay img {
+    max-width: 100%;
+    max-height: 90vh;
+    object-fit: contain;
+    padding: 10px;
+  }
+
+  #close-preview {
+    position: fixed;
+    top: 15px;
+    right: 15px;
+    background: rgba(255, 255, 255, 0.8);
+    color: #000;
+    font-size: 24px;
+    font-weight: bold;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    cursor: pointer;
+    z-index: 10000;
+    display: none;
+  }
+  
+}
+
