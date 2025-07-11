@@ -128,3 +128,22 @@
     width: 30px;
   }
 }
+
+/* estilos para que las hojitas floten */
+@keyframes flotando {
+  0% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(-6px) rotate(3deg); }
+  100% { transform: translateY(0) rotate(0deg); }
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .mascota-img-wrapper:hover .hojita {
+    opacity: 1;
+    animation: flotando 3s ease-in-out infinite;
+  }
+}
+
+.mascota-img-wrapper.mostrar-hojas .hojita {
+  opacity: 1 !important;
+  animation: flotando 3s ease-in-out infinite;
+}
