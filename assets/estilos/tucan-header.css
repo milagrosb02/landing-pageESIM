@@ -1,0 +1,22 @@
+.slider-height {
+  height: 100vh;
+}
+
+/* Estilo por defecto (desktop): oculto */
+.tucan-mobile {
+  display: none;
+}
+
+/* Solo visible y grande en mobile */
+@media (max-width: 768px) {
+  .tucan-mobile {
+    display: flex;
+    justify-content: center;
+    margin-top: 1.5rem;
+  }
+
+  .tucan-mobile img {
+    width: 150px;
+    height: auto;
+  }
+}
