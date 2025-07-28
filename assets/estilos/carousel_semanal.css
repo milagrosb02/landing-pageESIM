@@ -44,3 +44,110 @@
     color: #3d5fe6;
 }
 
+
+/* Lightbox básico */
+/* Fondo oscuro del lightbox */
+.lightbox {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.8);
+  justify-content: center;
+  align-items: center;
+  /*padding: 20px;*/
+  padding: 50px;
+}
+
+/* Imagen dentro del lightbox */
+.lightbox-img {
+  max-width: 90vw;
+  max-height: 80vh;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+  object-fit: contain;
+}
+
+/* Botón de cerrar */
+.close-lightbox {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  font-size: 2.5rem;
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+  z-index: 10000;
+}
+
+/* Asegura que funcione bien en móviles también */
+@media (max-width: 576px) {
+  .lightbox-img {
+    max-width: 95vw;
+    max-height: 70vh;
+  }
+
+  /* .close-lightbox {
+    font-size: 2rem;
+    top: 15px;
+    right: 20px;
+  } */
+
+   .close-lightbox {
+    font-size: 1.8rem;
+    top: 8px;
+    right: 12px;
+    background-color: rgba(0, 0, 0, 0.5); /* fondo semitransparente */
+    padding: 4px 10px;
+    border-radius: 8px;
+    color: #fff; /* color bien visible */
+    font-weight: bold;
+  }
+}
+
+.lightbox-img-container {
+  position: relative;
+  display: inline-block;
+}
+
+.close-lightbox {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 2rem;
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 5px 12px;
+  border-radius: 8px;
+  color: white;
+  cursor: pointer;
+  z-index: 10000;
+  transition: background-color 0.3s;
+}
+
+.close-lightbox:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* En móviles: acercamos la X a la imagen y la hacemos más pequeña */
+/* @media (max-width: 576px) {
+  .close-lightbox {
+    font-size: 1.5rem;
+    padding: 4px 10px;
+    top: 6px;
+    right: 6px;
+  }
+} */
+ @media (max-width: 576px) {
+  .lightbox {
+    padding: 15px !important;
+    box-sizing: border-box;
+  }
+
+  .lightbox-img {
+    max-width: 100%;
+    max-height: 70vh;
+  }
+}

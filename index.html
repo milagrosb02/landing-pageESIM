@@ -1014,32 +1014,7 @@
 <script src="./assets/js/main.js"></script>
 
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script>
-       // const linksData = [
-       // "",
-       // "https://inscripciones.sigi-des.com.ar/preinscripcion/108/58",
-       // "https://inscripciones.sigi-des.com.ar/preinscripcion/109/58",
-        
-   // ];
 
-    // document.getElementById('moreInfoBtn').addEventListener('click', () => {
-    //   const activeIndex = document.querySelector('.carousel-item.active').getAttribute('data-slide-to');
-    // const link = linksData[activeIndex]; 
-        //window.open(link, '_blank');
-    //});
-
-    //document.addEventListener('click', (e) => {
-      //  if (e.target.classList.contains('carousel-link') || e.target.parentNode.classList.contains('carousel-link')) {
-        //    let target = e.target;
-          //  if (!target.classList.contains('carousel-link')) {
-            //    target = target.parentNode;
-           // }
-           // const index = target.getAttribute('data-index');
-           // const link = linksData[index];
-           // window.open(link, '_blank');
-       // }
-    //});
-</script>
 
 <!-- Owl Carousel JS -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
@@ -1065,6 +1040,46 @@
         </div>
     </noscript>
     <!-- End of Statcounter Code -->
+
+
+    <!-- inicio del carousel semanal para abir imagenes -->
+     <div id="preview-overlay">
+        <img id="preview-image" src="" alt="Vista ampliada">
+    </div>
+
+    <button id="close-preview" aria-label="Cerrar vista ampliada">×</button>
+
+    <script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const images = document.querySelectorAll('.carousel-image');
+    const overlay = document.getElementById('preview-overlay');
+    const previewImage = document.getElementById('preview-image');
+    const closeBtn = document.getElementById('close-preview');
+
+    images.forEach(img => {
+      img.addEventListener('click', function () {
+        if (window.innerWidth <= 768) {
+          previewImage.src = this.src;
+          overlay.style.display = 'flex';
+          closeBtn.style.display = 'block';
+        }
+      });
+    });
+
+    closeBtn.addEventListener('click', function () {
+      overlay.style.display = 'none';
+      closeBtn.style.display = 'none';
+      previewImage.src = '';
+    });
+  });
+</script>
+
+<div id="lightbox" class="lightbox">
+  <div class="lightbox-img-container">
+    <span class="close-lightbox">×</span>
+    <img class="lightbox-img" id="lightbox-img" src="" alt="Imagen ampliada">
+  </div>
+</div>
 
 </body>
 </html>
