@@ -8,15 +8,41 @@
 }
 
 /* Solo visible y grande en mobile */
-@media (max-width: 768px) {
+ @media (max-width: 576px) {
   .tucan-mobile {
     display: flex;
     justify-content: center;
-    margin-top: 1.5rem;
+    margin-top: 1rem;
   }
 
-  .tucan-mobile img {
-    width: 150px;
+  .tucan-video-mobile {
+    /* max-width: 180px;
+    height: auto; */
+    width: 205px; /* Aumentamos el tamaño */
     height: auto;
+    display: block;
+    margin: 0 auto;
+   
   }
+}
+
+/* VIDEO DEL TUCAN */
+.background-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+
+.slider-height {
+  position: relative;
+  z-index: 1;
+}
+
+.hero__caption {
+  position: relative;
+  z-index: 2;
 }
