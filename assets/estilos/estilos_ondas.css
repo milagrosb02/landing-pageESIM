@@ -56,7 +56,6 @@
 }
 
 
-
 /* =============================================================================================================================
    RESUMEN SEMANAL (solo esta sección)
    ========================================================================================================================= */
@@ -65,4 +64,44 @@
   font-weight: 800;
   color: #ffffff;
   margin-bottom: 24px;
+}
+
+
+/* =============================================================================================================================
+   NIVEL SECUNDARIO (solo esta sección)
+   ========================================================================================================================= */
+   /* Asegurá que el bloque permita ver la ola y tenga referencia de posición */
+.courses-area.fix {
+  position: relative;
+  overflow: visible;        /* pisa el overflow:hidden de la plantilla */
+  padding-bottom: 104px;    /* deja espacio para que la wave no tape nada */
+}
+
+/* Tamaño/capas de la ola (si no lo tenés ya) */
+.wave {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 64px;
+  line-height: 0;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 2;               /* por arriba del fondo del section */
+}
+
+.wave--bottom { bottom: -1px; }
+.wave--top    { top: -1px; }
+
+.courses-area h1 {
+  font-size: 2.9rem;
+  font-weight: 900;
+  color: #f2f2f2;   /* mismo color que Tecnovedades */
+  margin-bottom: 24px;
+}
+
+.properties__caption p {
+  font-weight: 600;   /* medio en negrita */
+  color: #192de1;     /* blanco */
+  font-size: 1rem;    /* tamaño un poquito más legible */
+  margin-bottom: 8px; /* espacio debajo */
 }
