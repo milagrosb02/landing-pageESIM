@@ -100,8 +100,8 @@
 }
 
 .properties__caption p {
-  font-weight: 600;   /* medio en negrita */
+  font-weight: 900;   /* medio en negrita */
   color: #192de1;     /* blanco */
-  font-size: 1rem;    /* tamaño un poquito más legible */
+  font-size: 1.8rem;    /* tamaño un poquito más legible */
   margin-bottom: 8px; /* espacio debajo */
 }
