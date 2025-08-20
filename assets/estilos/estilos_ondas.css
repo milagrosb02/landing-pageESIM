@@ -1,0 +1,63 @@
+/* =========================================================================================================================
+   BLOQUES Y WAVES REUTILIZABLES
+   ======================================================================================================================== */
+
+/* Bloques con aire + alternado de fondo.
+   Sumo más bottom para que la wave inferior no tape contenido. */
+.section-block {
+  padding: 64px 0 104px;   /* top 64 / bottom 104 (onda ~64px) */
+  position: relative;
+  overflow: visible;
+}
+
+
+
+/* Onda (top o bottom). Va fuera del flujo, ancho completo. */
+.wave {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 40px;            /* alto de la onda */
+  line-height: 0;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 0;
+}
+.wave--top    { top: -1px; }
+.wave--bottom { bottom: -1px; }
+
+.wave svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+/* Paleta de colores para la onda
+   (aplicá una de estas clases extra en el mismo div.wave) */
+.wave path { fill: #ffffff; }         /* fallback */
+
+
+/* Suavizado para elementos con AOS */
+[data-aos] { will-change: transform, opacity; }
+
+
+
+
+/* =============================================================================================================================
+   TECNOVEDADES (solo esta sección)
+   ========================================================================================================================= */
+
+/* Título TECNOVEDADES */
+.noticias-innovacion h1 {
+  font-size: 2.8rem;
+  font-weight: 800;
+  color: #3d259b;
+  margin-bottom: 24px;
+}
+
+
+
+/* =============================================================================================================================
+   NIVEL SECUNDARIO (solo esta sección)
+   ========================================================================================================================= */
+   
