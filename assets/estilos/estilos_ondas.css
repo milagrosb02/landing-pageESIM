@@ -109,7 +109,7 @@
 .courses-area.fix {
   position: relative;
   overflow: visible;        /* pisa el overflow:hidden de la plantilla */
-  padding-bottom: 104px;    /* deja espacio para que la wave no tape nada */
+  padding-bottom: 70px;    /* deja espacio para que la wave no tape nada */
 }
 
 /* Tamaño/capas de la ola (si no lo tenés ya) */
@@ -133,6 +133,16 @@
   color: #f2f2f2;   /* mismo color que Tecnovedades */
   margin-bottom: 24px;
 }
+
+
+.courses-area .titulo-m {
+  font-size: 2.9rem;
+  font-weight: 900;
+  color: #251be2;   /* azul */
+  margin-bottom: 24px;
+}
+
+
 
 .properties__caption p {
   font-weight: 900;   /* medio en negrita */
