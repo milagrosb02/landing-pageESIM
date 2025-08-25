@@ -2,6 +2,41 @@
    BLOQUES Y WAVES REUTILIZABLES
    ======================================================================================================================== */
 
+/* -------------------------------------------------------------------------------------------------------------------------- */
+/* =========================================================================================================================
+   SCROLL UP 
+   ======================================================================================================================== */
+
+#back-top {
+  position: fixed;         /* ya lo tenés, lo reafirmamos */
+  right: 16px;
+  bottom: 22px;
+  z-index: 10000;          /* << clave: más alto que cualquier ola */
+}
+
+/* Las waves nunca capturan click y quedan por debajo del UI flotante */
+.wave {
+  pointer-events: none;
+  z-index: 0;              /* asegúrate de que no tengan z-index alto */
+}
+
+/* Por si alguna sección crea un stacking context con z-index altos */
+.section-block,
+.courses-area,
+.actividades-semanales {
+  position: relative;      /* contexto normal */
+  z-index: 1;              /* contenido por encima de la wave (0) */
+}
+
+/* Un poco más de aire para que la wave no “pise” el borde inferior
+   (ajustá 80px si tu ola es más chica) */
+.section-block { 
+  padding-bottom: 100px;   /* o lo que ya uses + ~40px extra */
+}
+
+/* -------------------------------------------------------------------------------------------------------------------------- */
+
+
 /* Bloques con aire + alternado de fondo.
    Sumo más bottom para que la wave inferior no tape contenido. */
 .section-block {
