@@ -154,10 +154,10 @@
 
 
 /* seccion titulo de directoras */
-.section-directoras h1 {
-  font-size: 3.8rem;
-  font-weight: 950;
-  color: #ffffff;
+.titulo-directoras {
+  font-size: 2.8rem;   /* igual que Tecnovedades */
+  font-weight: 900;
+  color: #ffffff;      /* blanco */
   margin-bottom: 24px;
   
 }
