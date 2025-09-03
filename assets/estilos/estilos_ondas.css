@@ -150,3 +150,15 @@
   font-size: 1.8rem;    /* tamaño un poquito más legible */
   margin-bottom: 8px; /* espacio debajo */
 }
+
+
+
+/* seccion titulo de directoras */
+.section-directoras h1 {
+  font-size: 3.8rem;
+  font-weight: 950;
+  color: #ffffff;
+  margin-bottom: 24px;
+  
+}
+
