@@ -127,17 +127,18 @@
 .wave--bottom { bottom: -1px; }
 .wave--top    { top: -1px; }
 
+/*nivel secundario y formacion continua*/
 .courses-area h1 {
-  font-size: 2.9rem;
-  font-weight: 900;
+  font-size: 3.6rem;
+  font-weight: 910;
   color: #f2f2f2;   /* mismo color que Tecnovedades */
   margin-bottom: 24px;
 }
 
-
+/* nivel terciario */
 .courses-area .titulo-m {
-  font-size: 2.9rem;
-  font-weight: 900;
+  font-size: 3.6rem;
+  font-weight: 910;
   color: #251be2;   /* azul */
   margin-bottom: 24px;
 }
