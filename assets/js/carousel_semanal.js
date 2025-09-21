@@ -11,12 +11,30 @@ $(document).ready(function () {
     }
   });
 
+// DESPUES DESCOMENTAR
+//   $('.card-actividad img').on('click', function () {
+//   const src = $(this).attr('src');
+//   $('#lightbox-img').attr('src', src);
+//   $('#lightbox').css('display', 'flex');
+// })
 
-  $('.card-actividad img').on('click', function () {
+// Para imágenes (borrar)
+$('.card-actividad img').on('click', function () {
   const src = $(this).attr('src');
-  $('#lightbox-img').attr('src', src);
+  $('#lightbox-video').hide().attr('src', ''); // Ocultar video
+  $('#lightbox-img').attr('src', src).show();  // Mostrar imagen
   $('#lightbox').css('display', 'flex');
-})
+});
+
+// Para videos (borrar)
+$('.card-actividad video').on('click', function () {
+  const src = $(this).find('source').attr('src');
+  $('#lightbox-img').hide().attr('src', '');    // Ocultar imagen
+  $('#lightbox-video source').attr('src', src);
+  $('#lightbox-video')[0].load();              // Recargar el video
+  $('#lightbox-video').show();
+  $('#lightbox').css('display', 'flex');
+});
 
   // Al hacer clic en la X, cerrar
   $('.close-lightbox').on('click', function () {
