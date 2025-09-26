@@ -163,5 +163,45 @@
   
 }
 
+/* =============================================================================================================================
+   PRE INSCRIPCIONES 2026 (LUEGO BORRAR)
+   ========================================================================================================================= */
+/* Sección Preinscripciones */
+.preinscripciones-innovacion {
+  padding: 40px 20px;   /* antes 60px, ahora más chico */
+  text-align: center;
+  color: #fff;
+}
 
+.preinscripciones-innovacion h1 {
+  font-size: 2.4rem;    /* un poco más chico */
+  font-weight: 900;
+  margin-bottom: 16px;  /* menos espacio debajo */
+  color: #fff;
+}
+
+.preinscripciones-innovacion .subtitulo-pre {
+  font-size: 2.3rem;
+  margin-bottom: 10px;  /* le damos más respiro antes del botón */
+  color: #fff;
+}
+
+/* Botón */
+.btn-preinscripcion {
+  display: inline-block;
+  background: #000000;
+  color: #ffffff;
+  font-size: 1.7rem;     /* lo achicamos un toque */
+  font-weight: bold;
+  padding: 20px 28px;    /* más compacto */
+  border-radius: 8px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  margin-top: 10px;      /* empuja el botón un poquito más abajo */
+}
+
+.btn-preinscripcion:hover {
+  background: #29640c;
+  color: #fff;
+}
 
