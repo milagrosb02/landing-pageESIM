@@ -168,40 +168,41 @@
    ========================================================================================================================= */
 /* Sección Preinscripciones */
 .preinscripciones-innovacion {
-  padding: 40px 20px;   /* antes 60px, ahora más chico */
+  padding: 40px 20px;
   text-align: center;
   color: #fff;
 }
 
 .preinscripciones-innovacion h1 {
-  font-size: 2.4rem;    /* un poco más chico */
-  font-weight: 900;
-  margin-bottom: 16px;  /* menos espacio debajo */
-  color: #fff;
-}
-
-.preinscripciones-innovacion .subtitulo-pre {
   font-size: 2.3rem;
-  margin-bottom: 10px;  /* le damos más respiro antes del botón */
+  font-weight: 900;
+  margin-bottom: 32px;
   color: #fff;
 }
 
-/* Botón */
-.btn-preinscripcion {
+/* Bloque de cada título + link */
+.preinscripcion-item {
+  margin-bottom: 20px;
+}
+
+.subtitulo-pre {
+  font-size: 2.1rem;
+  margin-bottom: 18px;
+  color: #fff;
+}
+
+/* Link estilizado */
+.link-preinscripcion {
   display: inline-block;
-  background: #000000;
-  color: #ffffff;
-  font-size: 1.7rem;     /* lo achicamos un toque */
-  font-weight: bold;
-  padding: 20px 28px;    /* más compacto */
-  border-radius: 8px;
+  font-size: 1.9rem;
+  font-weight: 600;
+  color: #ffde59;
   text-decoration: none;
+  border-bottom: 2px solid transparent;
   transition: all 0.3s ease;
-  margin-top: 10px;      /* empuja el botón un poquito más abajo */
 }
 
-.btn-preinscripcion:hover {
-  background: #29640c;
-  color: #fff;
+.link-preinscripcion:hover {
+  color: #ffffff;
+  border-bottom: 2px solid #ffde59;
 }
-
