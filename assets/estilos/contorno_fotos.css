@@ -1,0 +1,4 @@
+.right-img img {
+  border-radius: 12px; /* esquinas redondeadas */
+  box-shadow: 0 8px 24px rgba(0,0,0,0.15); /* sombra elegante */
+}
