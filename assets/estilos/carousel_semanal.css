@@ -273,5 +273,8 @@
   font-size: 46px;
 }
 
+.actividades-semanales{
+  padding-bottom: 140px !important; /* deja aire para la wave */
+}
 
 /* FIN INICIO CARUSEL TEMPORAL DE NUEVAS AVENTURAS */
