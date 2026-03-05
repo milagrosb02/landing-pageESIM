@@ -240,41 +240,20 @@
   .puntos::after{ content:"..."; }
 }
 
-.carrusel-semanal .owl-stage{
-  display: flex;
-  align-items: stretch;
-}
-.carrusel-semanal .owl-item{
-  display: flex;
-  justify-content: center;
-}
-/* Placeholder: que se vea bien sobre naranja */
-.card-actividad.card-proximamente{
-  max-width: 820px;
-  margin: 0 auto;
-  background: rgba(255,255,255,.16);
-  border: 2px dashed rgba(255,255,255,.60);
-  box-shadow: none;
-  padding: 34px 24px;
+/* menos separación entre cards */
+.carrusel-semanal.owl-carousel .owl-item{
+  padding: 6px !important;   /* antes tenías 10px */
 }
 
-.card-actividad.card-proximamente .titulo-prox{
-  color: #fff;            /* antes te quedaba azul */
-  font-size: 20px;
-  font-weight: 800;
+/* cards más “cuadradas” */
+.carrusel-semanal .card-actividad{
+  border-radius: 12px;
+  padding: 10px;
 }
 
-.card-actividad.card-proximamente .descripcion-prox{
-  color: rgba(255,255,255,.92);
+.carrusel-semanal .card-actividad img,
+.carrusel-semanal .card-actividad video.video-actividad{
+  height: 200px;             /* probá 190–210 */
+  border-radius: 10px;
 }
 
-/* el icono que flote pero suave */
-.icono-prox{
-  font-size: 46px;
-}
-
-.actividades-semanales{
-  padding-bottom: 140px !important; /* deja aire para la wave */
-}
-
-/* FIN INICIO CARUSEL TEMPORAL DE NUEVAS AVENTURAS */
